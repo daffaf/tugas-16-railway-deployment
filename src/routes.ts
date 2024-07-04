@@ -9,7 +9,12 @@ import authMiddleware from "./middlewares/auth.middleware";
 import authController from "./controllers/auth.controller";
 import aclMiddleware from "./middlewares/acl.middleware";
 const router = express.Router();
-
+router.get("/", (req,res)=>{
+    res.status(201).json({
+        message : "server is running ..",
+        data : "ok"
+    })
+})
 router.get("/products", productsController.findAll);
 router.post("/products", productsController.create);
 router.get("/products/:id", productsController.findOne);
