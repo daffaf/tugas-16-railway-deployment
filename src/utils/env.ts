@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config()
-
+export const PORT  =  process.env.PORT
 export const CLOUDINARY_API_KEY: string = process.env.CLOUDINARY_API_KEY || "";
 export const CLOUDINARY_API_SECRET: string =
   process.env.CLOUDINARY_API_SECRET || "";
